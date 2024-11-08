@@ -68,7 +68,7 @@ def notify_next_day_duties():
     message_parts.append(", ".join(duties['morning']) if duties['morning'] else "None")
     message_parts.append("\n**Afternoon:**")
     message_parts.append(", ".join(duties['afternoon']) if duties['afternoon'] else "None")
-    message_parts.append(f"\n- Duties for {date_str}")
+    message_parts.append(f"\n-# Duties for {date_str}")
     
     # Send message if there are duties for the next day
     if any(duties[time_of_day] for time_of_day in duties):
